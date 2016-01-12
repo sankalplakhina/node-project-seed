@@ -12,6 +12,7 @@
 * npm start
 * app will fire up at http://localhost:5000
 * To test prod environment run: export NODE_ENV=production and then npm start
+* Use pm2 for prod setup, startup.json included with all configs setup for pm2 config
 
 ### Who do I talk to? ###
 
