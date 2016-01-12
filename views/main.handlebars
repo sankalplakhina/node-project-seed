@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/">
+
+    <link rel="shortcut icon" type="image/png" href="/public/img/favicon_32.png">
+
+    {{#if isDev}}
+      <link rel="stylesheet" type="text/css" href="/public/css/styles.css">
+    {{else}}
+      <link rel="stylesheet" type="text/css" href="/public/css/styles-<!-- @echo hash -->.min.css">
+    {{/if}}
+
+  </head>
+  <body>
+    <div>Html page to render</div>
+
+    <script type="text/javascript">
+      window.appGlobal = {};
+    </script>
+
+    {{#if isDev}}
+      <script type="text/javascript">
+        window.appGlobal.mode = "development";
+      </script>
+      <script type="text/javascript" src="/public/js/main.js"></script>
+    {{else}}
+      <script type="text/javascript">
+        window.appGlobal.mode = "production";
+      </script>
+      <script async type="text/javascript" src="/public/js/main-<!-- @echo hash -->.min.js"></script>
+    {{/if}}
+
+  </body>
+</html>

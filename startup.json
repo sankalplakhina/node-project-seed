@@ -1,0 +1,13 @@
+{
+  "apps" : [{
+    "name"        : "node-project-seed",
+    "cwd"         : ".",
+    "script"      : "server.js",
+    "log_date_format"  : "DD-MM-YYYY HH:mm Z",
+    "out_file"    : "logs/out.log",
+    "error_file"    : "logs/err.log",
+    "env": {
+        "NODE_ENV": "production"
+    }
+  }]
+}
